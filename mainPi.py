@@ -10,7 +10,7 @@ key = "You know my diamonds be shining pull up 488 just like what?"
 async def hello(websocket, path):
     message = await websocket.recv()
     print(f"Received '{message}'")
-    with open('example.jpg', "rb") as img_file:
+    with open('example-photor.jpg', "rb") as img_file:
         imageString = base64.b64encode(img_file.read())
     print(f"Base64 length: {len(imageString)}")
     await websocket.send(imageString)
